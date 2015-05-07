@@ -11,6 +11,9 @@ var routes = require('./routes/index');
 var discover = require('./routes/discover');
 var shop = require('./routes/shop');
 var lookbooks = require('./routes/lookbooks');
+var promos = require('./routes/promos');
+var menus = require('./routes/menus');
+var ads = require('./routes/ads');
 
 var app = express();
 
@@ -37,6 +40,9 @@ app.use('/', routes);
 app.use('/discover', discover);
 app.use('/shop', shop);
 app.use('/lookbooks', lookbooks);
+app.use('/promos', promos);
+app.use('/menus', menus);
+app.use('/ads', ads);
 
 /// catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -19,7 +19,7 @@ router.get('/:channel?/:category?/:sub?', function (req, res) {
 
   setTimeout(function () {
     res.json(items);
-  }, 750);
+  }, 300);
 });
 
 module.exports = router;

@@ -2,31 +2,49 @@ var modals = require('./modals');
 var express = require('express');
 var router = express.Router();
 
-/*
- Advertentie (Improve Digital): 3,33% (4 stuks)
- Ankeiler (Eigen ad, gecreëerd vanuit campaigns op shop home of - indien gewenst - separaat): 3,33% (4 stuks)
- Productfoto (alleen inspirational image, packshot komt niet in de ontdek-stream, wél in de shopstream): 15% (18 stuks)
- Foto's, voorzien van Pictollage (dit moeten we opbouwen, uiteraard): minimaal 20% (24 stuks)
- Reviews (moet ook opgebouwd worden): 8,33% (10 stuks)
- PPC/CPC posities (click deals met uploaders, toekomst): 15 tot 20%
- */
+function shuffle(array) {
+  var counter = array.length, temp, index;
+
+  // While there are elements in the array
+  while (counter > 0) {
+    // Pick a random index
+    index = Math.floor(Math.random() * counter);
+
+    // Decrease counter by 1
+    counter--;
+
+    // And swap the last element with it
+    temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+
+  return array;
+}
 
 router.get('/:channel?/:category?/:sub?', function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  var limit = req.param('limit') ? req.param('limit') : 14,
+  var limit = req.param('limit') ? req.param('limit') : 12,
     params = {
       channel: req.params.channel,
       category: req.params.category,
       sub: req.params.sub
     },
-    items = [];
+    items = [],
+    ratio = 3 / 4,
+    photos = Math.ceil(limit * ratio),
+    products = limit - photos;
 
-  for (var n = 1; n <= limit; n++) {
+  for (var n = 1; n <= photos; n++) {
     items.push(modals.photo(params));
   }
 
+  for (var p = 1; p <= products; p++) {
+    items.push(modals.product(params, {inspiration: true}));
+  }
+
   setTimeout(function () {
-    res.json(items);
+    res.json(shuffle(items));
   }, 300);
 });
 

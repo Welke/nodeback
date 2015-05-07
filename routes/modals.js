@@ -81,7 +81,7 @@ module.exports = {
     return complete(brick, aspectX);
   },
 
-  product: function (segments) {
+  product: function (segments, options) {
     var product = defaults();
 
     var sizes = [
@@ -111,7 +111,7 @@ module.exports = {
       promoted: {inspiration: 8, packshot: 6}
     };
 
-    var shot = randomize(1, 10) % 2 === 0 ? 'inspiration' : 'packshot';
+    var shot = (options && options.inspiration) ? 'inspiration' : randomize(1, 10) % 2 === 0 ? 'inspiration' : 'packshot';
 
     var file = randomize(1, totals[sizes[picked][0]][shot]);
 
