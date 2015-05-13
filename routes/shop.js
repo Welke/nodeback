@@ -17,9 +17,13 @@ router.get('/:channel?/:category?/:sub?', function (req, res) {
     items.push(modals.product(params));
   }
 
-  setTimeout(function () {
-    res.json(items);
-  }, 300);
+  // setTimeout(function () {
+    res.json({
+      total: items.length,
+      filters: modals.filters(),
+      products: items
+    });
+  // }, 300);
 });
 
 module.exports = router;

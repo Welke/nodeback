@@ -24,6 +24,20 @@ function randomize(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function shuffle(array) {
+  var counter = array.length, temp, index;
+
+  while (counter > 0) {
+    index = Math.floor(Math.random() * counter);
+    counter--;
+    temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+
+  return array;
+}
+
 function aspect() {
   return Math.round((300 / randomize(200, 500)) * 100) / 100;
 }
@@ -177,5 +191,82 @@ module.exports = {
     }
 
     return complete(brick, aspectX);
+  },
+
+  filters: function () {
+    //var filters = shuffle([
+    //  {
+    //    id: 'kleur',
+    //    'default': 'Alle kleuren',
+    //    options: [
+    //      {id: 'goud', label: 'Goud'},
+    //      {id: 'wit', label: 'Wit'},
+    //      {id: 'zwart', label: 'Zwart'},
+    //      {id: 'grijs', label: 'Grijs'}
+    //    ]
+    //  },
+    //  {
+    //    id: 'materiaal',
+    //    'default': 'Alle materialen',
+    //    options: [
+    //      {id: 'metaal', label: 'Metaal'},
+    //      {id: 'hout', label: 'Hout'},
+    //      {id: 'plastiek', label: 'Plastiek'},
+    //      {id: 'papier', label: 'Papier'}
+    //    ]
+    //  },
+    //  {
+    //    id: 'prijs',
+    //    'default': 'Alle prijzen',
+    //    options: [
+    //      {id: '0-50', label: '€ 0-50'},
+    //      {id: '50-100', label: '€ 50-100'},
+    //      {id: '100-150', label: '€ 100-150'}
+    //    ]
+    //  },
+    //  {
+    //    id: 'anders',
+    //    'default': 'Alle andere',
+    //    options: [
+    //      {id: 'optie-1', label: 'Optie 1'},
+    //      {id: 'optie-2', label: 'Optie 2'},
+    //      {id: 'optie-3', label: 'Optie 3'}
+    //    ]
+    //  }
+    //]);
+    //
+    //return filters.splice(0, randomize(1, 4));
+
+    return [
+      {
+        id: 'kleur',
+        'default': 'Alle kleuren',
+        options: [
+          {id: 'goud', label: 'Goud'},
+          {id: 'wit', label: 'Wit'},
+          {id: 'zwart', label: 'Zwart'},
+          {id: 'grijs', label: 'Grijs'}
+        ]
+      },
+      {
+        id: 'materiaal',
+        'default': 'Alle materialen',
+        options: [
+          {id: 'metaal', label: 'Metaal'},
+          {id: 'hout', label: 'Hout'},
+          {id: 'plastiek', label: 'Plastiek'},
+          {id: 'papier', label: 'Papier'}
+        ]
+      },
+      {
+        id: 'prijs',
+        'default': 'Alle prijzen',
+        options: [
+          {id: '0-50', label: '€ 0-50'},
+          {id: '50-100', label: '€ 50-100'},
+          {id: '100-150', label: '€ 100-150'}
+        ]
+      }
+    ];
   }
 };
