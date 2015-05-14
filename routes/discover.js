@@ -28,7 +28,8 @@ router.get('/:channel?/:category?/:sub?', function (req, res) {
     params = {
       channel: req.params.channel,
       category: req.params.category,
-      sub: req.params.sub
+      sub: req.params.sub,
+      comments: req.param('comments')
     },
     items = [],
     ratio = 3 / 4,

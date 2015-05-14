@@ -61,11 +61,27 @@ function complete(brick, aspect) {
   brick.member = {
     username: username,
     serialized: slugger(username),
-    avatar: randomize(1, 100) % 3 !== 0 ? 'http://lorempixel.com/50/50?' + (Date.now() * aspect) : undefined
+    avatar: randomize(1, 100) % 3 !== 0 ? 'http://lorempixel.com/50/50?' + Math.floor(Date.now() * aspect) : undefined
     // avatar: 'http://localhost:3000/assets/partners/' + randomize(1, 8) + '.jpg'
   };
 
   return brick;
+}
+
+function comments() {
+  var comments = [],
+    comment;
+
+  for (var i = 0; i < randomize(1, 9); i++) {
+    comment = {
+      message: lorem(3, 5),
+      activity: {}
+    };
+
+    comments.push(complete(comment, randomize(1, 5)));
+  }
+
+  return comments;
 }
 
 module.exports = {
@@ -91,6 +107,10 @@ module.exports = {
         comments: randomize(0, 20)
       }
     };
+
+    if (segments.comments) {
+      brick.comments = comments();
+    }
 
     return complete(brick, aspectX);
   },
@@ -160,6 +180,10 @@ module.exports = {
         comments: randomize(0, 20)
       }
     };
+
+    if (segments.comments) {
+      brick.comments = comments();
+    }
 
     return complete(brick);
   },
