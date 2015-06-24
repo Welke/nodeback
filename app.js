@@ -9,11 +9,18 @@ var routes = require('./routes/index');
 
 // App roots
 var discover = require('./routes/discover');
+var detail = require('./routes/detail');
+var comments = require('./routes/comments');
+
 var shop = require('./routes/shop');
+
 var lookbooks = require('./routes/lookbooks');
+
 var promos = require('./routes/promos');
 var menus = require('./routes/menus');
 var ads = require('./routes/ads');
+
+var blog = require('./routes/blog');
 
 var app = express();
 
@@ -38,11 +45,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 app.use('/discover', discover);
+app.use('/detail', detail);
+app.use('/comments', comments);
+
 app.use('/shop', shop);
+
 app.use('/lookbooks', lookbooks);
+
 app.use('/promos', promos);
 app.use('/menus', menus);
 app.use('/ads', ads);
+
+app.use('/blog', blog);
 
 /// catch 404 and forward to error handler
 app.use(function (req, res, next) {

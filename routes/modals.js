@@ -24,6 +24,7 @@ function randomize(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// TODO: Still being used?
 function shuffle(array) {
   var counter = array.length, temp, index;
 
@@ -113,6 +114,11 @@ module.exports = {
     }
 
     return complete(brick, aspectX);
+  },
+
+  // TODO: Still needed?
+  comments: function (id) {
+    return comments();
   },
 
   product: function (segments, options) {
@@ -292,5 +298,25 @@ module.exports = {
         ]
       }
     ];
+  },
+
+  blog: function () {
+    var title, serialized, articles = [];
+
+    for (var i = 0; i < 10; i++) {
+      title = lorem(7, 20);
+      serialized = slugger(title);
+
+      articles.push({
+        category: 'binnenkijken',
+        photo: 'http://lorempixel.com/700/700?' + Date.now() * aspect(),
+        title: title,
+        serialized: serialized,
+        summary: lorem(20, 40),
+        published: Date.now()
+      })
+    }
+
+    return articles;
   }
 };
