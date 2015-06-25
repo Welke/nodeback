@@ -363,5 +363,54 @@ module.exports = {
     post.related = this.blog(undefined, 20);
 
     return post;
+  },
+
+  page: function (id) {
+    var pages = {
+      'over-welke-nl': {
+        title: 'Over Welke.nl'
+      },
+      'hoe-het-werkt': {
+        title: 'Hoe het werkt'
+      },
+      'shoppen': {
+        title: 'Shoppen'
+      },
+      'verkopen': {
+        title: 'Verkopen'
+      },
+      'contact': {
+        title: 'Contact'
+      },
+      'voorwaarden-gebruik': {
+        title: 'Voorwaarden gebruik'
+      },
+      'voorwaarden-kopen': {
+        title: 'Voorwaarden kopen'
+      },
+      'voorwaarden-verkopen': {
+        title: 'Voorwaarden verkopen'
+      },
+      'privacy': {
+        title: 'Privacy'
+      },
+      'cookies': {
+        title: 'Cookies'
+      },
+      'auteursrecht': {
+        title: 'Auteursrecht'
+      }
+    };
+
+    var page = {
+      title: pages[id].title,
+      content: ''
+    };
+
+    for (var p = 0; p < randomize(4, 7); p++) {
+      page.content += '<p>' + lorem(20, 30) + '</p>';
+    }
+
+    return page;
   }
 };
