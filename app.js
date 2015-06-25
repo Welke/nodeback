@@ -21,7 +21,7 @@ var menus = require('./routes/menus');
 var ads = require('./routes/ads');
 
 var blog = require('./routes/blog');
-var article = require('./routes/article');
+var post = require('./routes/post');
 
 var app = express();
 
@@ -58,7 +58,7 @@ app.use('/menus', menus);
 app.use('/ads', ads);
 
 app.use('/blog', blog);
-app.use('/article', article);
+app.use('/post', post);
 
 /// catch 404 and forward to error handler
 app.use(function (req, res, next) {

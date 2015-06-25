@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/:id?', function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  var post = modals.article(req.params.id);
+  var post = modals.post(req.params.id);
 
   res.json(post);
 });

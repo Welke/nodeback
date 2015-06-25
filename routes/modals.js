@@ -327,7 +327,7 @@ module.exports = {
     return articles;
   },
 
-  article: function () {
+  post: function () {
     var categories = ['binnenkijken', 'architectuur', 'producten', 'tips-ideeen', 'dossiers'];
 
     var title, serialized;
@@ -335,7 +335,7 @@ module.exports = {
     title = lorem(7, 20);
     serialized = slugger(title);
 
-    var article = {
+    var post = {
       category: categories[randomize(0, 4)],
       photo: 'http://lorempixel.com/700/700?' + Date.now() * aspect(),
       title: title,
@@ -354,14 +354,14 @@ module.exports = {
 
     for (var i = 0; i < randomize(3, 5); i++) {
       for (var p = 0; p < randomize(1, 3); p++) {
-        article.content += '<p>' + lorem(20, 30) + '</p>';
+        post.content += '<p>' + lorem(20, 30) + '</p>';
       }
 
-      article.content += '<img src="http://lorempixel.com/700/700?' + Date.now() * aspect() + '" />';
+      post.content += '<img src="http://lorempixel.com/700/700?' + Date.now() * aspect() + '" />';
     }
 
-    article.related = this.blog(undefined, 20);
+    post.related = this.blog(undefined, 20);
 
-    return article;
+    return post;
   }
 };
