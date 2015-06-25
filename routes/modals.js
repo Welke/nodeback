@@ -344,7 +344,11 @@ module.exports = {
       content: '',
       published: Date.now(),
       by: lorem(2, 5),
-      source: lorem(7, 20),
+      source: {
+        link: 'http://welke.nl/',
+        by: lorem(3, 5),
+        name: lorem(2, 4)
+      },
       related: []
     };
 
