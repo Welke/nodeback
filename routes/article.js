@@ -2,12 +2,12 @@ var modals = require('./modals');
 var express = require('express');
 var router = express.Router();
 
-router.get('/:category?', function (req, res) {
+router.get('/:id?', function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  var posts = modals.blog(req.params.category, 10);
+  var post = modals.article(req.params.id);
 
-  res.json(posts);
+  res.json(post);
 });
 
 module.exports = router;

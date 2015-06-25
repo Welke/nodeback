@@ -300,23 +300,64 @@ module.exports = {
     ];
   },
 
-  blog: function () {
+  blog: function (category, count) {
+    var categories = ['binnenkijken', 'architectuur', 'producten', 'tips-ideeen', 'dossiers'];
+
     var title, serialized, articles = [];
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < count; i++) {
       title = lorem(7, 20);
       serialized = slugger(title);
 
-      articles.push({
-        category: 'binnenkijken',
+      var article = {
+        category: category || categories[randomize(0, 4)],
         photo: 'http://lorempixel.com/700/700?' + Date.now() * aspect(),
         title: title,
-        serialized: serialized,
-        summary: lorem(20, 40),
-        published: Date.now()
-      })
+        serialized: serialized
+      };
+
+      if (category !== 'top-posts') {
+        article.summary = lorem(20, 40);
+        article.published = Date.now();
+      }
+
+      articles.push(article)
     }
 
     return articles;
+  },
+
+  article: function () {
+    var categories = ['binnenkijken', 'architectuur', 'producten', 'tips-ideeen', 'dossiers'];
+
+    var title, serialized;
+
+    title = lorem(7, 20);
+    serialized = slugger(title);
+
+    var article = {
+      category: categories[randomize(0, 4)],
+      photo: 'http://lorempixel.com/700/700?' + Date.now() * aspect(),
+      title: title,
+      serialized: serialized,
+      summary: lorem(20, 40),
+      content: '',
+      published: Date.now(),
+      by: lorem(2, 5),
+      source: lorem(7, 20),
+      related: []
+    };
+
+    for (var i = 0; i < randomize(3, 5); i++) {
+      for (var p = 0; p < randomize(1, 3); p++) {
+        article.content += '<p>' + lorem(20, 30) + '</p>';
+      }
+
+      article.content += '<img src="http://lorempixel.com/700/700?' + Date.now() * aspect() + '" />';
+    }
+
+    article.related = this.blog(undefined, 20);
+
+    return article;
   }
 };
