@@ -407,8 +407,8 @@ module.exports = {
       content: ''
     };
 
-    for (var p = 0; p < randomize(4, 7); p++) {
-      page.content += '<p>' + lorem(20, 30) + '</p>';
+    for (var p = 0; p < randomize(9, 17); p++) {
+      page.content += '<p>' + lorem(40, 50) + '</p>';
     }
 
     return page;
@@ -421,12 +421,12 @@ module.exports = {
       case 'suggestions':
         results = [];
 
-        var types = ['photos', 'products', 'lookbooks', 'members'];
+        var types = ['fotos', 'producten', 'lookbooks', 'members'];
 
-        for (var i = 0; i < randomize(0, 14); i++) {
+        for (var i = 0; i < randomize(2, 14); i++) {
           results.push({
             type: types[randomize(0, 3)],
-            result: (query + ' ' + lorem(1, 3)).toLowerCase()
+            title: (query + ' ' + lorem(1, 3)).toLowerCase()
           });
         }
         break;
