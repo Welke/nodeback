@@ -412,5 +412,25 @@ module.exports = {
     }
 
     return page;
+  },
+
+  search: function () {
+    var results = {
+      photos: {
+        total: randomize(100, 2000),
+        results: []
+      },
+      products: {
+        total: randomize(10, 200),
+        results: []
+      },
+      lookbooks: {
+        total: randomize(20, 500),
+        results: []
+      },
+      members: {
+        total: randomize(0)
+      }
+    }
   }
 };
