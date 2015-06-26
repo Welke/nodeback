@@ -424,9 +424,13 @@ module.exports = {
         var types = ['fotos', 'producten', 'lookbooks', 'members'];
 
         for (var i = 0; i < randomize(2, 14); i++) {
+          var title = (query + ' ' + lorem(1, 3)).toLowerCase(),
+            serialized = slugger(title)
+
           results.push({
             type: types[randomize(0, 3)],
-            title: (query + ' ' + lorem(1, 3)).toLowerCase()
+            title: title,
+            serialized: serialized
           });
         }
         break;
