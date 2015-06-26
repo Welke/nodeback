@@ -414,24 +414,34 @@ module.exports = {
     return page;
   },
 
-  search: function () {
-    var results = {
-      photos: {
-        total: randomize(100, 2000),
-        results: []
-      },
-      products: {
-        total: randomize(10, 200),
-        results: []
-      },
-      lookbooks: {
-        total: randomize(20, 500),
-        results: []
-      },
-      members: {
-        total: randomize(0)
-      }
-    };
+  search: function (query) {
+    //var results = {
+    //  photos: {
+    //    total: randomize(100, 2000),
+    //    results: []
+    //  },
+    //  products: {
+    //    total: randomize(10, 200),
+    //    results: []
+    //  },
+    //  lookbooks: {
+    //    total: randomize(20, 500),
+    //    results: []
+    //  },
+    //  members: {
+    //    total: randomize(0)
+    //  }
+    //};
+
+    var results = [],
+      types = ['photos', 'products', 'lookbooks', 'members'];
+
+    for (var i = 0; i < randomize(0, 14); i++) {
+      results.push({
+        type: types[randomize(0, 3)],
+        result: query + lorem(1, 3)
+      });
+    }
 
     return results;
   }

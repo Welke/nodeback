@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
   //    break;
   //}
 
-  res.json(modals.search());
+  res.json(modals.search(req.param.query));
 });
 
 module.exports = router;
