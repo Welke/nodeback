@@ -431,6 +431,8 @@ module.exports = {
       members: {
         total: randomize(0)
       }
-    }
+    };
+
+    return results;
   }
 };
