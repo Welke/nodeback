@@ -414,33 +414,49 @@ module.exports = {
     return page;
   },
 
-  search: function (query) {
-    //var results = {
-    //  photos: {
-    //    total: randomize(100, 2000),
-    //    results: []
-    //  },
-    //  products: {
-    //    total: randomize(10, 200),
-    //    results: []
-    //  },
-    //  lookbooks: {
-    //    total: randomize(20, 500),
-    //    results: []
-    //  },
-    //  members: {
-    //    total: randomize(0)
-    //  }
-    //};
+  search: function (section, query) {
+    var results;
 
-    var results = [],
-      types = ['photos', 'products', 'lookbooks', 'members'];
+    switch (section) {
+      case 'suggestions':
+        results = [];
 
-    for (var i = 0; i < randomize(0, 14); i++) {
-      results.push({
-        type: types[randomize(0, 3)],
-        result: query + lorem(1, 3)
-      });
+        var types = ['photos', 'products', 'lookbooks', 'members'];
+
+        for (var i = 0; i < randomize(0, 14); i++) {
+          results.push({
+            type: types[randomize(0, 3)],
+            result: (query + ' ' + lorem(1, 3)).toLowerCase()
+          });
+        }
+        break;
+      case 'results':
+        results = {
+          id: randomize(2000, 100000),
+          photos: {
+            total: randomize(100, 2000),
+            results: []
+          },
+          products: {
+            total: randomize(10, 200)
+          },
+          lookbooks: {
+            total: randomize(20, 500)
+          },
+          members: {
+            total: randomize(0, 40)
+          }
+        };
+
+        for (var p = 0; p < 20; p++) {
+          results.photos.results.push(this.photo({
+            channel: 'channel',
+            category: 'category',
+            sub: 'sub',
+            comments: false
+          }));
+        }
+        break;
     }
 
     return results;
