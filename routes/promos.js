@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
   var promos = [
     {
       type: 'small',
-      file: 'promotional-3-1.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-3-1.png',
       background: '#06070a',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'small',
-      file: 'promotional-3-2.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-3-2.png',
       background: '#06070a',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -24,7 +24,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'small',
-      file: 'promotional-3-3.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-3-3.png',
       background: '#06070a',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -32,7 +32,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'medium',
-      file: 'promotional-2-1.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-2-1.png',
       background: '#f9f8f5',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -40,7 +40,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'medium',
-      file: 'promotional-2-2.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-2-2.png',
       background: '#f9f8f5',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -48,7 +48,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'medium',
-      file: 'promotional-2-3.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-2-3.png',
       background: '#f9f8f5',
       alignment: 'middle',
       link: 'http://google.com/',
@@ -56,7 +56,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'large',
-      file: 'promotional-1-1.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-1-1.png',
       background: '#d2bec9',
       alignment: 'bottom',
       link: 'http://google.com/',
@@ -64,7 +64,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'large',
-      file: 'promotional-1-2.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-1-2.png',
       background: '#d2bec9',
       alignment: 'bottom',
       link: 'http://google.com/',
@@ -72,7 +72,7 @@ router.get('/', function (req, res) {
     },
     {
       type: 'large',
-      file: 'promotional-1-3.png',
+      file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/promos/promotional-1-3.png',
       background: '#d2bec9',
       alignment: 'bottom',
       link: 'http://google.com/',
