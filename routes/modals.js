@@ -170,7 +170,7 @@ module.exports = {
         sub: (segments.sub) ? segments.sub : undefined
       },
       photo: {
-        file: 'http://localhost:3000/assets/products/' + sizes[picked][0] + '/' + shot + '/' + file + '.jpg',
+        file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/products/' + sizes[picked][0] + '/' + shot + '/' + file + '.jpg',
         shot: shot,
         title: product.title,
         serialized: product.title_slug,
@@ -425,7 +425,7 @@ module.exports = {
 
         for (var i = 0; i < randomize(2, 14); i++) {
           var title = (query + ' ' + lorem(1, 3)).toLowerCase(),
-            serialized = slugger(title)
+            serialized = slugger(title);
 
           results.push({
             type: types[randomize(0, 3)],

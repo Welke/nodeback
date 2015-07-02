@@ -83,32 +83,32 @@ router.get('/', function (req, res) {
   var banners = {
     header: {
       link: 'http://www.welke.nl/',
-      'default': '../assets/banners/shop-banner-header-medium.png',
-      large: '../assets/banners/shop-banner-header-large.png'
+      'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-header-medium.png',
+      large: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-header-large.png'
     },
     main: {
       link: 'http://www.welke.nl/',
-      'default': '../assets/banners/shop-banner-main-medium.png',
-      large: '../assets/banners/shop-banner-main-large.png'
+      'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-main-medium.png',
+      large: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-main-large.png'
     },
     middle: {
       left: {
         link: 'http://www.welke.nl/',
-        'default': '../assets/banners/shop-banner-middle-left.png'
+        'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-middle-left.png'
       },
       middle: {
         link: 'http://www.welke.nl/',
-        'default': '../assets/banners/shop-banner-middle-middle.png'
+        'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-middle-middle.png'
       },
       right: {
         link: 'http://www.welke.nl/',
-        'default': '../assets/banners/shop-banner-middle-right.png'
+        'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-middle-right.png'
       }
     },
     footer: {
       link: 'http://www.welke.nl/',
-      'default': '../assets/banners/shop-banner-footer-medium.png',
-      large: '../assets/banners/shop-banner-footer-large.png'
+      'default': 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-footer-medium.png',
+      large: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/banners/shop-banner-footer-large.png'
     }
   };
 
