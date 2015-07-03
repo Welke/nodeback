@@ -18,6 +18,7 @@ var lookbooks = require('./routes/lookbooks');
 
 var promos = require('./routes/promos');
 var menus = require('./routes/menus');
+var locales = require('./routes/locales');
 var ads = require('./routes/ads');
 
 var blog = require('./routes/blog');
@@ -59,6 +60,7 @@ app.use('/lookbooks', lookbooks);
 
 app.use('/promos', promos);
 app.use('/menus', menus);
+app.use('/locales', locales);
 app.use('/ads', ads);
 
 app.use('/blog', blog);
