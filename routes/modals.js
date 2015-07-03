@@ -411,8 +411,9 @@ module.exports = {
 
     for (var p = 0; p < randomize(9, 17); p++) {
       page.content += '<p>' + lorem(40, 50) + '</p>';
-      page.content += '<img src="http://sheltered-inlet-8122.herokuapp.com/img/cdn/service/service-content-image.png" />'
     }
+
+    page.content += '<img src="http://sheltered-inlet-8122.herokuapp.com/img/cdn/service/service-content-image.png" />';
 
     return page;
   },
