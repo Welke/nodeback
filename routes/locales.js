@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
     }
   };
 
-  res.json(locales);
+  res.json(locales[req.param('lang')]);
 });
 
 module.exports = router;
