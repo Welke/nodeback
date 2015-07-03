@@ -404,6 +404,7 @@ module.exports = {
 
     var page = {
       title: pages[id].title,
+      cover: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/service/service-cover-image.png',
       content: ''
     };
 
