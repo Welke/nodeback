@@ -170,7 +170,8 @@ module.exports = {
         sub: (segments.sub) ? segments.sub : undefined
       },
       photo: {
-        file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/products/' + sizes[picked][0] + '/' + shot + '/' + file + '.jpg',
+        // file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/products/' + sizes[picked][0] + '/' + shot + '/' + file + '.jpg',
+        file: 'http://lorempixel.com/' + sizes[picked][1] + '/' + sizes[picked][2] + '?' + (Date.now() * randomize(1, 5)),
         shot: shot,
         title: product.title,
         serialized: product.title_slug,
