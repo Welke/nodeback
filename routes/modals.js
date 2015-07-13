@@ -126,9 +126,9 @@ module.exports = {
 
     var sizes = [
       ['default', 300, 300],
-      ['portrait', 300, 620],
-      ['landscape', 620, 300],
-      ['promoted', 620, 620]
+      ['portrait', 300, 615],
+      ['landscape', 615, 300],
+      ['promoted', 615, 615]
     ];
     for (var d = 0; d < 6; d++) {
       sizes.push(sizes[0]);
@@ -163,8 +163,6 @@ module.exports = {
     var discounted = randomize(1, 16) % 4 === 0 ? randomize(5, 150) + '.' + decimals[randomize(0, 12)] : undefined;
 
     var width = (options && options.discover) ? 300 : sizes[picked][1];
-
-    console.log('width:', width);
 
     var brick = {
       type: 'product',
