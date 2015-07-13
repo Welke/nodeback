@@ -126,9 +126,9 @@ module.exports = {
 
     var sizes = [
       ['default', 300, 300],
-      ['portrait', 300, 615],
+      ['portrait', 300, 600],
       ['landscape', 615, 300],
-      ['promoted', 615, 615]
+      ['promoted', 615, 600]
     ];
     for (var d = 0; d < 6; d++) {
       sizes.push(sizes[0]);
