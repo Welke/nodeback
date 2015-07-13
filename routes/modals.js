@@ -171,7 +171,7 @@ module.exports = {
       },
       photo: {
         // file: 'http://sheltered-inlet-8122.herokuapp.com/img/cdn/products/' + sizes[picked][0] + '/' + shot + '/' + file + '.jpg',
-        file: 'http://lorempixel.com/' + sizes[picked][1] + '/' + sizes[picked][2] + '?' + (Date.now() * randomize(1, 5)),
+        file: 'http://lorempixel.com/' + (options.discover) ? 300 : sizes[picked][1] + '/' + sizes[picked][2] + '?' + (Date.now() * randomize(1, 5)),
         shot: shot,
         title: product.title,
         serialized: product.title_slug,

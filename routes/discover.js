@@ -41,7 +41,7 @@ router.get('/:channel?/:category?/:sub?', function (req, res) {
   }
 
   for (var p = 1; p <= products; p++) {
-    items.push(modals.product(params, {inspiration: true}));
+    items.push(modals.product(params, {inspiration: true, discover: true}));
   }
 
   setTimeout(function () {
