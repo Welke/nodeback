@@ -190,6 +190,10 @@ module.exports = {
       }
     };
 
+    if (options && options.discover) {
+      brick.photo.aspect = aspect();
+    }
+
     if (segments.comments) {
       brick.comments = comments();
     }
