@@ -11,7 +11,7 @@ router.get('/', function (req, res) {
         overview: {
           name: '/4045/Welke/homepage/',
           slots: [
-            {position: 1, provider: 'ad360yield', id: '673927', sizes: [[300, 250]]},
+            {position: 2, provider: 'ad360yield', id: '673927', sizes: [[300, 250]]},
             {position: 4, provider: 'ad360yield', id: '583997', sizes: [[300, 250]]},
             {position: 6, provider: 'ad360yield', id: '583999', sizes: [[300, 250]]},
             {position: 9, provider: 'ad360yield', id: '583995', sizes: [[300, 250]]},
