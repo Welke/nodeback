@@ -125,10 +125,10 @@ module.exports = {
     var product = defaults();
 
     var sizes = [
-      ['default', 300, 300],
-      ['portrait', 300, 600],
-      ['landscape', 615, 300],
-      ['promoted', 615, 600]
+      ['default', 300, 300, 1],
+      ['portrait', 300, 600, .5],
+      ['landscape', 615, 300, 2.05],
+      ['promoted', 615, 600, 1.025]
     ];
     for (var d = 0; d < 6; d++) {
       sizes.push(sizes[0]);
@@ -191,7 +191,8 @@ module.exports = {
     };
 
     if (options && options.discover) {
-      brick.photo.aspect = aspect();
+      // brick.photo.aspect = aspect();
+      brick.photo.aspect = sizes[picked][3];
     }
 
     if (segments.comments) {
