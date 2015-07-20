@@ -124,11 +124,17 @@ module.exports = {
   product: function (segments, options) {
     var product = defaults();
 
+    //var sizes = [
+    //  ['default', 300, 300, 1],
+    //  ['portrait', 300, 600, .5],
+    //  ['landscape', 615, 300, 2.05],
+    //  ['promoted', 615, 600, 1.025]
+    //];
     var sizes = [
       ['default', 300, 300, 1],
-      ['portrait', 300, 600, .5],
-      ['landscape', 615, 300, 2.05],
-      ['promoted', 615, 600, 1.025]
+      ['portrait', 300, 600, 2],
+      ['landscape', 615, 300,.48],
+      ['promoted', 615, 600,.97]
     ];
     for (var d = 0; d < 6; d++) {
       sizes.push(sizes[0]);
