@@ -33,105 +33,72 @@ router.get('/', function (req, res) {
         },
         detail: {
           name: '/4045/Welke/detail/',
-          slots: [
-            {
-              id: 1,
-              provider: 'ad-factor',
-              type: 'billboard',
-              ad: 'div-gpt-ad-1384175267241-0',
+          slots: {
+            'billboard': {
+              id: 'div-gpt-ad-1384175267241-0',
               sizes: [[728, 90], [970, 90], [970, 250], [970, 300]]
             },
-            {
-              id: 2,
-              provider: 'ad-factor',
-              type: 'rectangle',
-              ad: 'div-gpt-ad-1384175267241-1',
+            'rectangle': {
+              id: 'div-gpt-ad-1384175267241-1',
               sizes: [[300, 250], [300, 500], [300, 600], [300, 1200], [336, 280], [336, 560], [336, 600], [336, 1200]]
             },
-            {
-              id: 3,
-              provider: 'ad-factor',
-              type: 'slider',
-              ad: 'div-gpt-ad-1384175267241-2',
+            'slider': {
+              id: 'div-gpt-ad-1384175267241-2',
               sizes: [[728, 90], [970, 418], [970, 500]]
             }
-          ]
+          }
         }
       },
       article: {
         overview: {
           name: '/4045/Welke/inspiratie_overview/',
-          slots: [
-            {
-              id: 1,
-              provider: 'ad-factor',
-              type: 'billboard',
-              ad: 'div-gpt-ad-1382025360334-0',
+          slots: {
+            'billboard': {
+              id: 'div-gpt-ad-1382025360334-0',
               sizes: [[728, 90], [970, 90], [970, 250], [970, 300]]
             },
-            {
-              id: 2,
-              provider: 'ad-factor',
-              type: 'rectangle',
-              ad: 'div-gpt-ad-1382025360334-1',
+            'rectangle': {
+              id: 'div-gpt-ad-1382025360334-1',
               sizes: [[300, 250], [300, 500], [300, 600], [300, 1200]]
             },
-            {
-              id: 3,
-              provider: 'ad360yield',
-              ad: '584095',
+            3: {
+              id: '584095',
               sizes: [[300, 250]]
             },
-            {
-              id: 4,
-              provider: 'ad360yield',
-              ad: '643663',
+            4: {
+              id: '643663',
               sizes: [[300, 250]]
             },
-            {
-              id: 5,
-              provider: 'ad360yield',
-              ad: '643665',
+            5: {
+              id: '643665',
               sizes: [[300, 250]]
             }
-          ]
+          }
         },
         detail: {
           name: '/4045/Welke/inspiratie_detail/',
-          slots: [
-            {
-              id: 1,
-              provider: 'ad-factor',
-              type: 'billboard',
-              ad: 'div-gpt-ad-1382025389433-0',
+          slots: {
+            'billboard': {
+              id: 'div-gpt-ad-1382025360334-0',
               sizes: [[728, 90], [970, 90], [970, 250], [970, 300]]
             },
-            {
-              id: 2,
-              provider: 'ad-factor',
-              type: 'rectangle',
-              ad: 'div-gpt-ad-1382025389433-1',
+            'rectangle': {
+              id: 'div-gpt-ad-1382025360334-1',
               sizes: [[300, 250], [300, 500], [300, 600], [300, 1200]]
             },
-            {
-              id: 3,
-              provider: 'ad360yield',
-              ad: '584095',
+            3: {
+              id: '584095',
               sizes: [[300, 250]]
             },
-            {
-              id: 4,
-              provider: 'ad360yield',
-              ad: '643663',
+            4: {
+              id: '643663',
               sizes: [[300, 250]]
             },
-            {
-              id: 5,
-              provider: 'ad360yield',
-              ad: '643665',
+            5: {
+              id: '643665',
               sizes: [[300, 250]]
             }
-          ]
+          }
         }
       },
       campaigns: {
